@@ -1,9 +1,10 @@
 import React from "react";
+import { InputShowcase } from "./components/inputs/InputShowcase";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Hola</header>
+    <div style={{ fontFamily: "Tahoma, sans-serif" }} className="App">
+      <InputShowcase />
     </div>
   );
 }
