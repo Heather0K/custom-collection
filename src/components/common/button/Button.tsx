@@ -146,7 +146,7 @@ export const BtnIcon = styled.button<{
 `;
 interface ButtonProps {
   type?: string;
-  onClick?: any;
+  onClick?: () => any;
   ariaLabel: string;
   uppercase?: boolean;
   disabled?: boolean;

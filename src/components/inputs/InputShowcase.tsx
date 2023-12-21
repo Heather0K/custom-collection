@@ -4,7 +4,7 @@ import { Button } from "../common/button/Button";
 import { Checkbox } from "./checkbox/Checkbox";
 import { Select } from "./select/Select";
 import { Searchbar } from "./searchbar/Searchbar";
-import { DumpsterFire } from "../../shared/icons/dumpsterFire";
+import { DumpsterFire } from "../../shared/icons/DumpsterFire";
 
 const PageContainer = styled.div`
   display: flex;

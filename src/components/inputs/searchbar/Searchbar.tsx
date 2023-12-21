@@ -1,5 +1,5 @@
 import React from "react";
-import { Search } from "../../../shared/icons/search";
+import { SearchIcon } from "../../../shared/icons/SearchIcon";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   width: 300px;
   position: relative;
 `;
-const SearchIcon = styled(Search)`
+const Search = styled(SearchIcon)`
   width: 24px;
   color: black;
   margin: 8px;
@@ -41,13 +41,12 @@ const Input = styled.input`
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
   }
 `;
-// interface SearchbarProps {
-// }
+
 export const Searchbar = () => {
   return (
     <Container>
       <Wrapper>
-        <SearchIcon />
+        <Search />
         <Input
           onKeyDown={() => {
             console.log("keydown");

@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Select } from "./Select";
-import { DumpsterFire } from "../../../shared/icons/dumpsterFire";
+import { DumpsterFire } from "../../../shared/icons/DumpsterFire";
 
 const Options = [
   { value: "1", label: "Option 1" },
@@ -25,5 +25,4 @@ DefaultSelect.args = {
   options: Options,
   initOption: Options[0],
   placeholder: "pick one!",
-  icon: <DumpsterFire />,
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import { ChevronDown } from "@styled-icons/boxicons-regular/ChevronDown";
 import { Theme } from "../../../shared/global";
+import ChevronDownIcon from "../../../shared/icons/ChevronDownIcon";
 
 const DropdownBox = styled.button`
   border: 2px solid ${Theme.primary};
@@ -13,9 +13,15 @@ const DropdownBox = styled.button`
   margin-bottom: 10px;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   :hover {
     cursor: pointer;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
+  }
+  svg {
+    font-size: 16px;
   }
 `;
 
@@ -78,13 +84,16 @@ const Option = styled.button`
 
 const Wrapper = styled.div`
   padding-top: 15px;
-
+  svg {
+    transform: rotate(0);
+    transition: 0.3s ease-in-out;
+  }
   &[data-is-open="true"] {
     ${DropdownBox} {
       border: 3px solid rgba(4, 117, 144, 0.2);
     }
 
-    ${Icon} {
+    svg {
       transform: rotate(-180deg);
     }
 
@@ -102,9 +111,8 @@ interface OptionValue {
 interface SelectProps {
   options: OptionValue[];
   initOption: OptionValue;
-  onSelect: any;
+  onSelect: (s: OptionValue) => any;
   placeholder: string;
-  icon?: any;
 }
 
 export const Select = ({
@@ -112,7 +120,6 @@ export const Select = ({
   initOption,
   onSelect,
   placeholder,
-  icon,
 }: SelectProps) => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(initOption);
@@ -128,8 +135,8 @@ export const Select = ({
       <DropdownBox onClick={() => setOpen(!open)} aria-label="select">
         <Label>
           {placeholder} {selected.label}
-          <Icon />
         </Label>
+        <ChevronDownIcon />
       </DropdownBox>
       <Options>
         {options.map((option, i) => {
@@ -140,7 +147,7 @@ export const Select = ({
               data-is-selected={option.value === selected.value}
               onClick={() => handleSelect(option)}
             >
-              {icon} {option.label}
+              {option.label}
             </Option>
           );
         })}

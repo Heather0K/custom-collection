@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../../common/button/Button";
-import { CloseIcon } from "../../../shared/icons/closeIcon";
+import { CloseIcon } from "../../../shared/icons/CloseIcon";
 import styled from "styled-components";
 import { Theme } from "../../../shared/global";
 
@@ -76,10 +76,10 @@ export const SideBarContent = styled.aside<{ open: boolean }>`
 `;
 
 interface SidebarLayoutProps {
-  children: any;
-  content: any;
+  children: React.ReactElement;
+  content: React.ReactElement;
   open: boolean;
-  onOpen: any;
+  onOpen: () => any;
   title: string;
 }
 export const SidebarLayout = ({

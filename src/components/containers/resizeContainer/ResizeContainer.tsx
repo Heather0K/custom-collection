@@ -52,7 +52,7 @@ export const Handle = styled(HandleIcon)<{
 `;
 
 interface ResizeContainerProps {
-  children?: ReactElement;
+  children?: React.ReactElement;
   direction: string;
 }
 export const ResizeContainer = ({

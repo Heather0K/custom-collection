@@ -76,7 +76,7 @@ const Check = styled.input`
 interface CheckboxProps {
   disabled?: boolean;
   checked: boolean;
-  onChange?: any;
+  onChange?: () => any;
   inLineLabel?: string;
   subLabel?: string;
   countText?: string | number;

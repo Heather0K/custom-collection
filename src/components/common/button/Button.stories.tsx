@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "./Button";
-import { DumpsterFire } from "../../../shared/icons/dumpsterFire";
+import { DumpsterFire } from "../../../shared/icons/DumpsterFire";
 
 export default {
   title: "inputs/Button",
